@@ -89,9 +89,11 @@
             </div>
           </nav>
         <!-- Main Body -->
+        {% block banner_slider %}{% endblock banner_slider%}
         {% block main-content %}{% endblock main-content %}
+
         <!-- Footer -->
-        <footer class="container--fluid text-center fixed-bottom p-2 mt-5">
+        <footer class="container--fluid bg-success text-center fixed-bottom p-2 mt-5" style="color: white;">
             <p>&copy; 2024 Student Organization Explorer | Powered by Team 12</p>
         </footer>
     </body>
