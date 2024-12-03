@@ -12,22 +12,22 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static 'app/images/banner/vsa.jpg' %}" class="d-block w-100" alt="VSA Charity Gala" style="height: auto; max-height: 400px;">
+        <img src="{% static 'app/images/banner/vsa.jpg' %}" class="d-block w-100" alt="VSA Charity Gala" style="height: auto; max-height: 280px;">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'app/images/banner/fasu.jpg' %}" class="d-block w-100" alt="FASU Giving" style="height: auto; max-height: 400px;">
+        <img src="{% static 'app/images/banner/fasu.jpg' %}" class="d-block w-100" alt="FASU Giving" style="height: auto; max-height: 280px;">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'app/images/banner/seasa.jpg' %}" class="d-block w-100" alt="..." style="height: auto; max-height: 400px;">
+        <img src="{% static 'app/images/banner/seasa.jpg' %}" class="d-block w-100" alt="..." style="height: auto; max-height: 280px;">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'app/images/banner/kasa.jpg' %}" class="d-block w-100" alt="..." style="height: auto; max-height: 400px;">
+        <img src="{% static 'app/images/banner/kasa.jpg' %}" class="d-block w-100" alt="..." style="height: auto; max-height: 280px;">
         <div class="carousel-caption d-none d-md-block">
           <!-- <h5>Goat</h5>
           <p>Long</p> -->
@@ -46,5 +46,67 @@
 </div>
 {% endblock banner_slider%}
 {% block main-content %}
-Welcome mysite
+<div class="row">
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'app/images/vsa-logo.png' %}">
+    <div class="box-element product">
+      <h6><strong>Vietnamese Student Association</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Events</button>
+      <a class="btn btn-outline-success" href="#">Discover</a>
+      <h4 style="display: inline-block; float: right"><strong>VSA</strong></h4>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'app/images/seasa-logo.png' %}">
+    <div class="box-element product">
+      <h6><strong>Southeast Student Association</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Events</button>
+      <a class="btn btn-outline-success" href="#">Discover</a>
+      <h4 style="display: inline-block; float: right"><strong>SEASA</strong></h4>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'app/images/fasu-logo.png' %}">
+    <div class="box-element product">
+      <h6><strong>Filipino-American Student Union</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Events</button>
+      <a class="btn btn-outline-success" href="#">Discover</a>
+      <h4 style="display: inline-block; float: right"><strong>FASU</strong></h4>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="row">
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'app/images/kasa-logo.png' %}">
+    <div class="box-element product">
+      <h6><strong>Korean American Student Association</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Events</button>
+      <a class="btn btn-outline-success" href="#">Discover</a>
+      <h4 style="display: inline-block; float: right"><strong>KASA</strong></h4>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'app/images/hsa-logo.png' %}">
+    <div class="box-element product">
+      <h6><strong>Hmong Student Association</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Events</button>
+      <a class="btn btn-outline-success" href="#">Discover</a>
+      <h4 style="display: inline-block; float: right"><strong>HSA</strong></h4>
+    </div>
+  </div>
+
+</div>
+
+<br /><br /><br /><br />
 {% endblock main-content %}
