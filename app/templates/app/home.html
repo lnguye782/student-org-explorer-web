@@ -46,7 +46,7 @@
 </div>
 {% endblock banner_slider%}
 {% block main-content %}
-<div class="row">
+<div class="row" style="width:100%">
   <div class="col-lg-4">
     <img class="thumbnail" src="{% static 'app/images/vsa-logo.png' %}">
     <div class="box-element product">
@@ -83,7 +83,7 @@
 
 <br />
 
-<div class="row">
+<div class="row" style="width:100%">
   <div class="col-lg-4">
     <img class="thumbnail" src="{% static 'app/images/kasa-logo.png' %}">
     <div class="box-element product">
@@ -109,28 +109,19 @@
 
 <br />
 
-<div class="row">
+<div class="row" style="width:100%">
+  {% for product in products %}
   <div class="col-lg-4">
-    <img class="thumbnail" src="{% static 'app/images/vsa-shirt.png' %}">
+    <img class="thumbnail" src="{% static 'app/images/placeholder.png' %}">
     <div class="box-element product">
-      <h6><strong>VSA 2024-2025 Shirt</strong></h6>
+      <h6><strong>{{product.name}}</strong></h6>
       <hr>
       <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
       <a class="btn btn-outline-success" href="#">Detail</a>
-      <h4 style="display: inline-block; float: right"><strong>$10</strong></h4>
+      <h4 style="display: inline-block; float: right"><strong>${{product.price | floatformat:0}}</strong></h4>
     </div>
   </div>
-
-  <div class="col-lg-4">
-    <img class="thumbnail" src="{% static 'app/images/seasa-shirt.png' %}">
-    <div class="box-element product">
-      <h6><strong>SEASA 2024-2025 Shirt</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-      <a class="btn btn-outline-success" href="#">Detail</a>
-      <h4 style="display: inline-block; float: right"><strong>$10</strong></h4>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 <br /><br /><br /><br />
