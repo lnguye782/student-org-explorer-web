@@ -112,11 +112,11 @@
 <div class="row" style="width:100%">
   {% for product in products %}
   <div class="col-lg-4">
-    <img class="thumbnail" src="{% static 'app/images/placeholder.png' %}">
+    <img class="thumbnail" src="{{product.ImageURL}}">
     <div class="box-element product">
       <h6><strong>{{product.name}}</strong></h6>
       <hr>
-      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
       <a class="btn btn-outline-success" href="#">Detail</a>
       <h4 style="display: inline-block; float: right"><strong>${{product.price | floatformat:0}}</strong></h4>
     </div>
