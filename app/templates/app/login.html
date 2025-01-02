@@ -47,7 +47,11 @@
                             </div>
 
                             <p class="text-center h6 fw-bold mb-5 mx-1 mx-md-4 mt-4">You don't have an account? <a href = {% url 'register' %}>Register</a> </p>
-          
+                            {% for message in messages %}
+                            <p id='message' class="text-center h6 fw-bold mb-5 mx-1 mx-md-4 mt-4">{{message}}</p>
+
+                            
+                            {% endfor %}
                           </form>
           
                         </div>

@@ -1,0 +1,32 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% block register %}
+        <h5> Result search for {{searched}}</h5> <br/>
+        <div class="row" style="width:100%">
+          {% for product in keys %}
+          <div class="col-lg-4">
+            <img class="thumbnail" src="{{product.ImageURL}}">
+            <div class="box-element product">
+              <h6><strong>{{product.name}}</strong></h6>
+              <hr>
+              <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+              <a class="btn btn-outline-success" href="#">Detail</a>
+              <h4 style="display: inline-block; float: right"><strong>${{product.price | floatformat:0}}</strong></h4>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endblock register %}
+    </body>
+</html>
